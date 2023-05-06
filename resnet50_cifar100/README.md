@@ -60,3 +60,30 @@ vitis_analyzer xrt.run_summary
 
 
 # ResNet18 cifar100 qat
+
+Similarly,
+
+```
+# we can inspect the model
+python resnet18_cifar100_quant.py --quant_mode float --inspect
+
+# bitwidth=8
+python resnet18_cifar100_qat.py
+python resnet18_cifar100_qat.py --mode 'deploy'
+
+# bitwidth=4
+python resnet18_cifar100_qat.py --epochs 6 --quantizer_lr 1e-3 --weight_lr 1e-6
+python resnet18_cifar100_qat.py --mode 'deploy'
+
+
+# compile
+vai_c_xir -x qat_result/ResNet_0_int.xmodel -a /opt/vitis_ai/compiler/arch/DPUCAHX8H/U55C-DWC/arch.json -o dpu_xmodel_U55C -n resnet18_cifar100_U55C
+
+
+# run and profile
+cd /workspace/resnet50_cifar100/resnet18_qat_16bit
+python3 -m vaitrace_py ./resnet50_dpu.py 2 dpu_xmodel_U55C/res.xmodel
+
+```
+
+
