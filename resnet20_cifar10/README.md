@@ -19,8 +19,6 @@ cd Vitis-AI
 conda activate vitis-ai-pytorch
 source /workspace/setup/alveo/setup.sh DPUCAHX8H-DWC
 export XLNX_ENABLE_DEVICES=3
-
-
 ```
 
 
