@@ -11,6 +11,16 @@ sudo /opt/xilinx/xrt/bin/xbmgmt program --base --device 0000:41:00.0 --image xil
 ```
 
 
+# how to start on acclnode02
+
+```
+./docker_run.sh xilinx/vitis-ai-cpu:2.5.0.1260
+cd Vitis-AI
+conda activate vitis-ai-pytorch
+source /workspace/setup/alveo/setup.sh DPUCAHX8H-DWC
+export XLNX_ENABLE_DEVICES=3
+```
+
 
 # ResNet50 cifar100 qat
 
