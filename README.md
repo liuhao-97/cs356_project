@@ -1,6 +1,6 @@
 # Alveo U55C Deployment: ResNet18/50 (CIFAR-100) and ResNet20 (CIFAR-10) with Vitis-AI & HLS(hls4ml) Comparison
 
-The project deploys ResNet architectures on the **Xilinx Alveo U55C** using **Vitis-AI**, and compares the performance with a custom HLS accelerator using **`hls4ml`**.
+The project deploys ResNet architectures on the **Xilinx Alveo U55C** using **`Vitis-AI`**, and compares the performance with a custom HLS accelerator using **`hls4ml`**.
 
 * **⚡ Vitis-AI Deployment:**
     * Implementation of **ResNet18** and **ResNet50** on the **CIFAR-100** dataset.
